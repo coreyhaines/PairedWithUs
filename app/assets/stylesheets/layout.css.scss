@@ -1,0 +1,36 @@
+html {
+  margin: 0px;
+}
+
+body {
+  background: lightblue;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header {
+  width: 100%;
+  background: green;
+  height: 50px;
+
+  h1 {
+    margin: 0px 0px 0px 100px;
+    color: lightblue;
+  }
+}
+
+#content {
+  // border: 1px solid black;
+  width: 650px;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+
+#sidebar {
+}
+
+.clear {
+  clear: both;
+}
+

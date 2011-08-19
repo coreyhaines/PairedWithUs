@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  from: 2011-08-19
+  to: 2011-08-19
+  duration: 2011-08-19 15:01:40
+
+two:
+  from: 2011-08-19
+  to: 2011-08-19
+  duration: 2011-08-19 15:01:40

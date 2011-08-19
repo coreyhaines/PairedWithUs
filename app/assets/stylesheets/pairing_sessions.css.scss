@@ -1,0 +1,71 @@
+// Place all the styles related to the pairing_sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session_listing {
+  .session {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed white;
+
+    ul.participants {
+      li {
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        display: inline;
+        height: 100px;
+        width: 30%;
+        text-align: center;
+        background-color: lightgreen;
+        .name {
+          color: lightblue;
+          font-weight: bold;
+          padding: 5px 0px;
+          background-color: green;
+          -webkit-border-radius: 25px 25px 0 0;
+          -moz-border-radius: 25px 25px 0 0;
+          border-radius: 25px 25px 0 0;
+        }
+      }
+      li:first-of-type {
+        float: left;
+      }
+      li:last-of-type {
+        float: right;
+      }
+    }
+  }
+}
+
+
+.date_as_calendar {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  // +shadow(0, 3px, 3px)
+  border: 1px solid #3d5870;
+  display: inline-block;
+  float: left;
+  margin: 10px 90px 10px 0;
+
+  .month {
+    background-color: #3d5870;
+    color: white;
+    padding: 0 7px;
+    text-align: center
+  }
+
+  .day {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0 7px;
+    color: #263d52;
+    text-align: center
+  }
+
+  .year {
+    text-align: center;
+    font-size: 0.75em;
+  }
+}
