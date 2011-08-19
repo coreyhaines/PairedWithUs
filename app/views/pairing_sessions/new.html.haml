@@ -1,0 +1,13 @@
+.box
+  %h1 Please register your pairing session
+  .detail
+    = form_for @session , html: {class: "madlib_form"} do |f|
+      %p
+        I paired with
+        = f.text_field :pair_2
+        on
+        = f.text_field :from, class: "date-picker"
+        for
+        = f.text_field :duration
+        hours.
+      = f.submit "Register this pairing session"
