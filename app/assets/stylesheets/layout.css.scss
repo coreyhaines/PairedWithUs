@@ -21,6 +21,7 @@ body {
 
 #content {
   // border: 1px solid black;
+  float: left;
   width: 650px;
   margin-left: 200px;
   margin-top: 20px;
@@ -28,9 +29,32 @@ body {
 
 
 #sidebar {
+  float: right;
+  width: 250px;
+  background-color: green;
+  height: 500px;
+  border-left: 2px dashed white;
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed white;
+  font-size: 20px;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+
+  .navigations {
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover:before {
+        margin-right: 10px;
+        content: '»';
+      }
+    }
+  }
+
 }
 
 .clear {
   clear: both;
 }
-
