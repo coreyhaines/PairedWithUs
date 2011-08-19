@@ -4,7 +4,7 @@
     = form_for @session , html: {class: "madlib_form"} do |f|
       %p
         I paired with
-        = f.text_field :pair_2
+        = f.select :pair_2_id, pairs_for_select
         on
         = f.text_field :from, class: "date-picker"
         for
