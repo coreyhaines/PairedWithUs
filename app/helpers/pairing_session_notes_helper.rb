@@ -1,0 +1,2 @@
+module PairingSessionNotesHelper
+end

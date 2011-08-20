@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819190307) do
+ActiveRecord::Schema.define(:version => 20110819231429) do
+
+  create_table "pairing_session_notes", :force => true do |t|
+    t.integer  "pairing_session_id"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pairing_sessions", :force => true do |t|
     t.integer  "pair_1_id"

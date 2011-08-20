@@ -1,0 +1,2 @@
+class PairingSessionNotesController < ApplicationController
+end
