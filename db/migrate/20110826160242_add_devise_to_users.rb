@@ -7,7 +7,6 @@ class AddDeviseToUsers < ActiveRecord::Migration
       t.rememberable
       t.trackable
       t.token_authenticatable
-      t.password_salt
     end
     add_index :users, :email,                :unique => true
     add_index :users, :confirmation_token,   :unique => true
