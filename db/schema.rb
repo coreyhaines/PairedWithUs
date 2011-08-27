@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20110826160242) do
     t.integer  "pair_2_id"
     t.date     "start"
     t.date     "finish"
-    t.datetime "duration"
+    t.integer  "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

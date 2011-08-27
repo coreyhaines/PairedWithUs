@@ -5,7 +5,7 @@ class CreatePairingSessions < ActiveRecord::Migration
       t.references :pair_2
       t.date :start
       t.date :finish
-      t.datetime :duration
+      t.integer :duration
 
       t.timestamps
     end
