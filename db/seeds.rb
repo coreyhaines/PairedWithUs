@@ -1,12 +1,12 @@
 User.destroy_all
 
-p1 = User.create email: "coreyhaines@example.com", name: "Corey"
-p2 = User.create email: "sarahgray@example.com", name: "Sarah"
+p1 = User.create email: "coreyhaines@example.com", name: "Corey", password: "password"
+p2 = User.create email: "sarahgray@example.com", name: "Sarah", password: "password"
 
 PairingSession.destroy_all
 
 def new_session(from, duration, pair_1, pair_2, *notes)
-  p = PairingSession.create pair_1: pair_1, pair_2: pair_2, from: from, duration: duration
+  p = PairingSession.create pair_1: pair_1, pair_2: pair_2, start: from, duration: duration
   notes.each do |note|
     p.notes << PairingSessionNote.new(content: note)
   end

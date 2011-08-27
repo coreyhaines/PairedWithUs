@@ -2,7 +2,7 @@
   <h1>Pairing Sessions</h1>
   <ul class='detail session_listing'>
     <% @sessions.each do |session| %>
-      <% date = session.from %>
+      <% date = session.start %>
       <li class='session'>
         <div class='date_as_calendar'>
           <div class='month'>

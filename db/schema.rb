@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(:version => 20110826160242) do
   create_table "pairing_sessions", :force => true do |t|
     t.integer  "pair_1_id"
     t.integer  "pair_2_id"
-    t.date     "from"
-    t.date     "to"
+    t.date     "start"
+    t.date     "finish"
     t.datetime "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
