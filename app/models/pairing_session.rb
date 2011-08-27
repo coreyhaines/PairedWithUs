@@ -6,4 +6,8 @@ class PairingSession < ActiveRecord::Base
   def self.with_users
     all(:include => [:pair_1, :pair_2], :order => "start")
   end
+
+  def participants
+    [pair_1, pair_2]
+  end
 end

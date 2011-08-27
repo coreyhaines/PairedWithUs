@@ -1,7 +1,7 @@
 User.destroy_all
 
-p1 = User.create email: "coreyhaines@example.com", name: "Corey", password: "password"
-p2 = User.create email: "sarahgray@example.com", name: "Sarah", password: "password"
+p1 = User.create email: "coreyhaines@gmail.com", name: "Corey", password: "password"
+p2 = User.create email: "sarahg.gray@gmail.com", name: "Sarah", password: "password"
 
 PairingSession.destroy_all
 

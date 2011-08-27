@@ -12,11 +12,14 @@
           </div>
         </div>
         <ul class='participants box'>
-          <li><div class='name'><%= session.pair_1.name %></div></li>
-          <li><div class='name'><%= session.pair_2.name %></div></li>
+          <% session.participants.each do |participant| %>
+            <li>
+              <div class='name'><%= participant.name %></div>
+              <div class='gravatar'><%= image_tag participant.gravatar_url %></div>
+            </li>
+          <% end %>
         </ul>
       </li>
     <% end %>
-
   </ul>
 </div>
