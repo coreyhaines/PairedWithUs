@@ -1,7 +1,11 @@
 Pairedwithus::Application.routes.draw do
+  devise_for :users
+
   resources :pairing_session_notes
 
   resources :pairing_sessions
+
+  root to: "PairingSessions#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

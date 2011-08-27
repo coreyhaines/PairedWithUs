@@ -1,4 +1,6 @@
 class PairingSessionsController < ApplicationController
+  before_filter :authenticate_user!, except: :index
+
   def index
     @sessions = PairingSession.with_users
   end
