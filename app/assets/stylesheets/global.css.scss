@@ -21,9 +21,10 @@
 }
 
 #header {
-  h1 a {
-    color: white;
-    text-decoration: none;
+  h1 {
+    a {
+      color: white;
+    }
   }
 
   ul.actions {
@@ -35,6 +36,9 @@
     li {
       display: inline;
       margin-right:20px;
+      a {
+        color: white;
+      }
     }
   }
 }
@@ -46,4 +50,8 @@ ul {
   li {
     list-style: none;
   }
+}
+
+a {
+  text-decoration: none;
 }
