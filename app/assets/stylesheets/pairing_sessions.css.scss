@@ -16,7 +16,7 @@
         border-radius: 25px;
         display: inline;
         height: 108px;
-        width: 30%;
+        width: 180px;
         text-align: center;
         background-color: lightgreen;
         .name {
@@ -27,6 +27,9 @@
           -webkit-border-radius: 25px 25px 0 0;
           -moz-border-radius: 25px 25px 0 0;
           border-radius: 25px 25px 0 0;
+        }
+        img.gravatar {
+          width: 100%;
         }
       }
       li:first-of-type {

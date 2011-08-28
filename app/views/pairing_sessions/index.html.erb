@@ -15,7 +15,7 @@
           <% session.participants.each do |participant| %>
             <li>
               <div class='name'><%= participant.name %></div>
-              <div class='gravatar'><%= image_tag participant.gravatar_url %></div>
+              <%= image_tag participant.gravatar_url, :class => "gravatar" %>
             </li>
           <% end %>
         </ul>
