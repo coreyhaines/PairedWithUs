@@ -1,0 +1,15 @@
+.box
+  %h1 Pairing Sessions
+  %ul.detail.session_listing
+    -@sessions.each do |session|
+      %li.session
+        .information
+          .date_as_calendar
+            .month=session.start.strftime("%b")
+            .day=session.start.strftime("%e")
+          .actions View
+        %ul.participants.box
+          -session.participants.each do |participant|
+            %li
+              .name=participant.name
+              =image_tag participant.gravatar_url, class: "gravatar"
