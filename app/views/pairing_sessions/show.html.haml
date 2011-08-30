@@ -1,0 +1,12 @@
+.box.session_listing
+  %h1 What a great pairing session
+  .session
+    .information
+      .date_as_calendar
+        .month=@session.start.strftime("%b")
+        .day=@session.start.strftime("%e")
+    %ul.participants.box
+      -@session.participants.each do |participant|
+        %li
+          .name=participant.name
+          =image_tag participant.gravatar_url, class: "gravatar"

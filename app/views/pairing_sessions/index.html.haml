@@ -7,7 +7,7 @@
           .date_as_calendar
             .month=session.start.strftime("%b")
             .day=session.start.strftime("%e")
-          .actions View
+          .actions=link_to "View", pairing_session_path(session)
         %ul.participants.box
           -session.participants.each do |participant|
             %li

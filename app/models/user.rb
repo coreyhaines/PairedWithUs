@@ -14,4 +14,9 @@ class User < ActiveRecord::Base
   def new_pairing_session(params = {})
     pairing_sessions_left.new params
   end
+
+  def find_pairing_session(id)
+    PairingSession.where("id = ? AND (pair_1_id = ? OR pair_2_id = ?)",
+                          id, self.id, self.id).first
+  end
 end

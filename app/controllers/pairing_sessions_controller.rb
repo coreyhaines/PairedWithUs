@@ -5,6 +5,10 @@ class PairingSessionsController < ApplicationController
     @sessions = current_user.pairing_sessions
   end
 
+  def show
+    @session = current_user.find_pairing_session(params[:id])
+  end
+
   def new
     @session = current_user.new_pairing_session
   end
