@@ -4,7 +4,7 @@ class PairingSession < ActiveRecord::Base
   has_many :notes, :class_name => "PairingSessionNote"
 
   def self.with_users
-    all(:include => [:pair_1, :pair_2], :order => "start")
+    includes(:pair_1, :pair_2)
   end
 
   def participants
