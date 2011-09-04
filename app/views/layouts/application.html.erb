@@ -18,7 +18,9 @@
       </ul>
     </nav>
     <% if user_signed_in? %>
-      <section class='user-name'><%= current_user.email %></section>
+      <section class='user_info'>
+        <%= current_user.email %>
+      </section>
     <% end %>
   </header>
   <section id='content'>

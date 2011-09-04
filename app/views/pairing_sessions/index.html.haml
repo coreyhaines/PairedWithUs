@@ -1,6 +1,6 @@
 %script{:type => "text/template", :id => "pairing-session-template"}
   %li.session
-    %section.information
+    %article.information
       .date-as-calendar
         .month <%=date.month%>
         .day <%=date.day%>
@@ -18,7 +18,8 @@
 .box#session-listing
   %header
     %h1 Pairing Sessions
-  %ul.sessions
+  %section.detail
+    %ul.sessions
 
 :javascript
   function build_session(day, month, year, pair_1_name, pair_1_gravatar_url,

@@ -27,15 +27,22 @@ body > header {
     }
   }
 
-  nav ul {
+  .user_info {
+    color: white;
     position: absolute;
-    top: 0px;
+    top: 00px;
     right: 0px;
     margin-right: 20px;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    margin-right: 5px;
 
     li {
       display: inline;
-      margin-right:20px;
       a {
         color: white;
       }
