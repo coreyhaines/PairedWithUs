@@ -6,5 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require externals
 //= require_tree .
 
