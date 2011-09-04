@@ -1,6 +1,6 @@
 %script{:type => "text/template", :id => "pairing-session-template"}
   %li.session
-    .information
+    %section.information
       .date-as-calendar
         .month <%=date.month%>
         .day <%=date.day%>
@@ -16,7 +16,8 @@
 
 
 .box#session-listing
-  %h1 Pairing Sessions
+  %header
+    %h1 Pairing Sessions
   %ul.sessions
 
 :javascript

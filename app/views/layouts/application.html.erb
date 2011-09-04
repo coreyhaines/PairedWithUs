@@ -8,27 +8,31 @@
 </head>
 <body>
 
-  <div id='header'>
+  <header>
     <h1><%= link_to "Paired With Us", root_path %></h1>
-    <ul class='actions'>
-      <% if user_signed_in? %>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-      <% end %>
-    </ul>
+    <nav>
+      <ul>
+        <% if user_signed_in? %>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      </ul>
+    </nav>
     <% if user_signed_in? %>
       <section class='user-name'><%= current_user.email %></section>
     <% end %>
-  </div>
-  <div id='content'>
+  </header>
+  <section id='content'>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-  </div>
-  <div id='sidebar'>
-    <ul class='navigations'>
+  </section>
+  <aside>
+  <nav>
+    <ul>
       <li><%= link_to "Register A Pairing Session", new_pairing_session_path %></li>
     </ul>
-  </div>
+  </nav>
+  </section>
 
 
 </body>

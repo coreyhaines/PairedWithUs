@@ -6,18 +6,19 @@ body {
   background: lightblue;
   margin: 0px;
   padding: 0px;
-}
 
-#header {
-  width: 100%;
-  background: green;
-  height: 50px;
+  & > header {
+    width: 100%;
+    background: green;
+    height: 50px;
 
-  h1 {
-    margin: 0px 0px 0px 100px;
-    color: lightblue;
+    h1 {
+      margin: 0px 0px 0px 100px;
+      color: lightblue;
+    }
   }
 }
+
 
 #content {
   // border: 1px solid black;
@@ -28,7 +29,7 @@ body {
 }
 
 
-#sidebar {
+body > aside {
   float: right;
   width: 250px;
   background-color: green;
@@ -41,7 +42,7 @@ body {
   padding-right: 10px;
   padding-top: 10px;
 
-  .navigations {
+  nav {
     a {
       text-decoration: none;
       color: white;
