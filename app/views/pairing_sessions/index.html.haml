@@ -1,15 +1,48 @@
-.box
+%script{:type => "text/template", :id => "pairing-session-template"}
+  %li.session
+    .information
+      .date-as-calendar
+        .month <%=date.month%>
+        .day <%=date.day%>
+    %ul.participants.box
+      %li
+        .name <%=pair_1.name%>
+        .image
+          <img src=<%=pair_1.gravatar_url%>></img>
+      %li
+        .name <%=pair_2.name%>
+        .image
+          <img src=<%=pair_2.gravatar_url%>></img>
+
+
+.box#session-listing
   %h1 Pairing Sessions
-  %ul.detail.session_listing
-    -@sessions.each do |session|
-      %li.session
-        .information
-          .date_as_calendar
-            .month=session.start.strftime("%b")
-            .day=session.start.strftime("%e")
-          .actions=link_to "View", pairing_session_path(session)
-        %ul.participants.box
-          -session.participants.each do |participant|
-            %li
-              .name=participant.name
-              =image_tag participant.gravatar_url, class: "gravatar"
+  %ul.sessions
+
+:javascript
+  function build_session(day, month, year, pair_1_name, pair_1_gravatar_url,
+              pair_2_name, pair_2_gravatar_url) {
+    return {
+      date: {
+        day: day,
+        month: month,
+        year: year
+      },
+
+      pair_1: {
+        name: pair_1_name,
+        gravatar_url: pair_1_gravatar_url
+      },
+
+      pair_2: {
+        name: pair_2_name,
+        gravatar_url: pair_2_gravatar_url
+      }
+    };
+  }
+
+%script
+  $(function() {
+  - @sessions.each do |session|
+    ==window.pairing_sessions.add(build_session("#{session.start.strftime('%e')}","#{session.start.strftime('%b')}","#{session.start.strftime('%Y')}","#{session.participants.first.name}", "#{session.participants.first.gravatar_url}", "#{session.participants.last.name}","#{session.participants.last.gravatar_url}"));
+  });
