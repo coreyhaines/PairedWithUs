@@ -21,6 +21,8 @@
   %section.detail
     %ul.sessions
 
+= javascript_include_tag "pairing_session_index", debug: true
+
 :javascript
   function build_session(day, month, year, pair_1_name, pair_1_gravatar_url,
               pair_2_name, pair_2_gravatar_url) {
@@ -48,3 +50,4 @@
   - @sessions.each do |session|
     ==window.pairing_sessions.add(build_session("#{session.start.strftime('%e')}","#{session.start.strftime('%b')}","#{session.start.strftime('%Y')}","#{session.participants.first.name}", "#{session.participants.first.gravatar_url}", "#{session.participants.last.name}","#{session.participants.last.gravatar_url}"));
   });
+
